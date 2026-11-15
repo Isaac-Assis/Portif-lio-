@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; background: #080B10; }
+  body { @apply bg-fundo font-texto text-tinta antialiased; font-size: 1.0625rem; line-height: 1.65; }
+  ::selection { background: #24476B; color: #F5F7FA; }
+  :focus-visible { outline: 2px solid #AAB6C8; outline-offset: 4px; border-radius: 4px; }
+}
+@layer components {
+  .btn { @apply inline-flex items-center gap-2 border border-linha px-6 py-3 font-medium text-tinta transition duration-300 hover:-translate-y-0.5 hover:border-marinho hover:bg-superficie active:translate-y-0 active:scale-[0.98]; }
+  .btn-main { @apply border-marinho bg-marinho hover:bg-[#2c5784]; }
+  .btn svg { @apply transition-transform duration-300; }
+  .btn:hover svg { @apply translate-x-1; }
+}
